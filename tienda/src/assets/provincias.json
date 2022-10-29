@@ -1,0 +1,23 @@
+
+[
+  {
+    "id": "1201",
+    "name": "Huancayo ",
+    "department_id": "12"
+  },
+  {
+    "id": "1202",
+    "name": "Concepción ",
+    "department_id": "12"
+  },
+  {
+    "id": "1204",
+    "name": "Jauja ",
+    "department_id": "12"
+  },
+  {
+    "id": "1209",
+    "name": "Chupaca ",
+    "department_id": "12"
+  }
+]

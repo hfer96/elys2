@@ -1,0 +1,295 @@
+<app-nav></app-nav>
+<!--margin-left: 9.1em; width:1229px !important; height:730px-->
+<main class="cs-page-wrapper">
+    <section class="cs-carousel cs-controls-onhover">
+        <div class="cs-carousel-inner" data-carousel-options=''>
+    
+          <!-- Slide 1 -->
+          <div class="bg-size-cover py-xl-6" style="background-image: url(../../assets/img/ecommerce/home/hero-slider/01.jpg);margin-bottom: 2em !important; width:100%;">
+            <div class="container pt-5 pb-6">
+              <div class="row pb-lg-6">
+                <div class="col-lg-6 offset-lg-1 offset-xl-0 pb-4 pb-md-6">
+                  <div class="mb-4 cs-scale-up cs-delay-2">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Slide 2 -->
+          <!--<div class="bg-size-cover py-xl-6" style="background-image: url(../../assets/img/ecommerce/home/hero-slider/02.jpg);">
+            <div class="container pt-5 pb-6">
+              <div class="row pb-lg-6">
+                <div class="col-lg-6 offset-lg-1 offset-xl-0 pb-4 pb-md-6">
+                  <h3 class="font-size-lg text-uppercase cs-from-top cs-delay-1">New Collection</h3>
+                  <h2 class="display-2 mb-lg-5 pb-3 cs-scale-down">Fall-Winter 2021</h2>
+                  <div class="mb-4 cs-scale-down cs-delay-2">
+                    <a href="shop-catalog.html" class="btn btn-outline-primary btn-lg">Shop the collection</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>-->
+    
+          <!-- Slide 3 -->
+          <!--<div class="bg-size-cover py-xl-6" style="background-image: url(../../assets/img/ecommerce/home/hero-slider/03.jpg);">
+            <div class="container pt-5 pb-6">
+              <div class="row pb-lg-6">
+                <div class="col-lg-6 offset-lg-1 offset-xl-0 pb-4 pb-md-6">
+                  <h3 class="font-size-lg text-uppercase cs-from-left cs-delay-1">Limited Edition</h3>
+                  <h2 class="display-2 mb-lg-5 pb-3 cs-from-left">Leather Issue</h2>
+                  <div class="mb-4 cs-scale-up cs-delay-2">
+                    <a href="shop-catalog.html" class="btn btn-outline-primary btn-lg">Shop the collection</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>-->
+    
+          <!-- Slide 4 -->
+          <!--<div class="bg-size-cover py-xl-6" style="background-image: url(../../assets/img/ecommerce/home/hero-slider/04.jpg);">
+            <div class="container pt-5 pb-6">
+              <div class="row pb-lg-6">
+                <div class="col-lg-6 offset-lg-1 offset-xl-0 pb-4 pb-md-6">
+                  <h3 class="font-size-lg text-uppercase cs-from-top cs-delay-1">Hottest Prices</h3>
+                  <h2 class="display-2 mb-lg-5 pb-3 cs-scale-down">Kidswear Sales</h2>
+                  <div class="mb-4 cs-scale-down cs-delay-2">
+                    <a href="shop-catalog.html" class="btn btn-outline-primary btn-lg">Shop sale now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>-->
+        </div>
+    
+    </section>
+
+    <section class="container pt-5 pt-lg-0">
+        <div class="cs-carousel cs-nav-outside">
+          <div class="cs-carousel-inner cs-carousel-inner-two" data-carousel-options=''>
+            <!-- Category -->
+            <a class="d-block cs-image-scale cs-heading-highlight text-center">
+              <div class="cs-image-inner mb-3 rounded">
+                <img src="../../assets/img/ecommerce/home/categories/01.jpg" alt="Women’s">
+              </div>
+              <h3 class="h5 mb-1">Arreglos para eventos</h3>
+            </a>
+            <!-- Category -->
+            <a class="d-block cs-image-scale cs-heading-highlight text-center">
+              <div class="cs-image-inner mb-3 rounded">
+                <img src="../../assets/img/ecommerce/home/categories/02.jpg" alt="Men’s">
+              </div>
+              <h3 class="h5 mb-1">Peluches de toda variedad</h3>
+            </a>
+            <!-- Category -->
+            <a class="d-block cs-image-scale cs-heading-highlight text-center">
+              <div class="cs-image-inner mb-3 rounded">
+                <img src="../../assets/img/ecommerce/home/categories/03.jpg" alt="Kids'">
+              </div>
+              <h3 class="h5 mb-1">Regalos para toda ocasión</h3>
+            </a>
+          </div>
+        </div>
+    </section>
+    
+
+    <!-- New arrivals -->
+    <section class="container-fluid px-xl-grid-gutter mt-5 mb-3 mb-sm-4 mt-md-0 mb-lg-1 py-5 py-lg-1">
+        <div class="text-center mb-5 pb-2">
+          <h2 class="h1">Nuevos productos</h2>
+          <p class="font-size-lg text-muted mb-1">Echa un vistazo a nuestros ultimos productos de esta temporada</p>
+          <a [routerLink]="['/productos']" class="font-size-lg">Ver los productos aqui</a>
+        </div>
+
+        <!-- Product carousel -->
+        <div class="cs-carousel cs-nav-outside">
+          <div class="cs-carousel-inner cs-carousel-inner-three" data-carousel-options='{
+            
+          }'>
+
+            <!-- Item -->
+            <div *ngFor="let item of new_productos">
+              <div class="card card-product">
+                <div class="card-product-img">
+                  <a [routerLink]="['/productos/',item.slug]" class="card-img-top">
+                    <img [src]="url +'obtener_portada/'+item.portada" alt="Product image">
+                  </a>
+                  <div class="card-product-widgets-top">
+                    <div class="star-rating">
+                      <i class="sr-star cxi-star-filled active"></i>
+                      <i class="sr-star cxi-star-filled active"></i>
+                      <i class="sr-star cxi-star-filled active"></i>
+                      <i class="sr-star cxi-star-filled active"></i>
+                      <i class="sr-star cxi-star-filled active"></i>
+                    </div>
+                  </div>
+                  <div class="card-product-widgets-bottom">
+                    <a href="#" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h3 class="card-product-title text-truncate mb-1">
+                    <a [routerLink]="['/productos/',item.slug]" class="nav-link">{{item.titulo}}</a>
+                  </h3>
+                  <div class="d-flex align-items-center">
+                    <span class="h5 d-inline-block mb-0">S/.{{item.precio}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+    </section>
+
+     <!-- Trending products (carousel) -->
+    <section class="py-1" style="background-color: #e5e8ed;">
+        <div class="container my-lg-2 py-2 py-md-4">
+          <div class="d-flex align-items-center justify-content-between pb-sm-1 mb-5">
+            <h2 class="h1 mb-0">Productos más vendidos</h2>
+            <div class="tns-custom-controls cs-controls-inverse" id="custom-controls-trending" tabindex="0">
+              <button type="button" data-controls="prev" tabindex="-1">
+                <i class="cxi-arrow-left"></i>
+              </button>
+              <button type="button" data-controls="next" tabindex="-1">
+                <i class="cxi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="cs-carousel pb-2">
+            <div class="cs-carousel-inner cs-carousel-inner-four" data-carousel-options='{
+              
+            }'>
+
+              <!-- Item -->
+              <div *ngFor="let item of mas_vendidos">
+                <div class="card card-product mx-auto">
+                  <div class="card-product-img">
+                    <a [routerLink]="['/productos/',item.slug]" class="card-img-top">
+                      <img [src]="url +'obtener_portada/'+item.portada" alt="Product image">
+                    </a>
+                    <div class="card-product-widgets-top">
+                      <div class="star-rating ml-auto">
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                      </div>
+                    </div>
+                    <div class="card-product-widgets-bottom">
+                      <a href="#" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                    </div>
+                  </div>
+                  <div class="card-body bg-0 pb-2">
+                    <h3 class="card-product-title text-truncate mb-2">
+                      <a [routerLink]="['/productos/',item.slug]" class="nav-link">{{item.titulo}}</a>
+                    </h3>
+                    <div class="d-flex align-items-center">
+                      <span class="h5 d-inline-block mb-0">S/.{{item.precio}}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="text-center pt-4 pt-md-5">
+            <a [routerLink]="['/productos']" class="btn btn-primary btn-lg">Ver productos</a>
+          </div>
+        </div>
+    </section>
+
+    <!-- Popular categories -->
+    <section class="container mt-1 mb-3 my-sm-4 py-5 py-lg-4">
+        <h2 class="h1 mb-5 pb-3 text-center">Categorias</h2>
+        <div class="cs-carousel cs-nav-outside">
+          <div class="cs-carousel-inner cs-carousel-inner-five" data-carousel-options='{
+            
+          }'>
+
+            <!-- Category -->
+            <div class="pb-2" *ngFor="let item of categorias">
+              <a [routerLink]="['/productos/categoria/',item.titulo.toLowerCase()]" class="d-block cs-image-scale cs-heading-highlight text-center">
+                <div class="cs-image-inner rounded-circle mx-auto mb-4" style="max-width: 180px;">
+                  <img [src]="item.portada" alt="Category image">
+                </div>
+                <h3 class="h5 mb-3">{{item.titulo}}</h3>
+              </a>
+            </div>
+
+          </div>
+        </div>
+    </section>
+
+
+
+    <!-- Services -->
+    <section class="container pt-5 pb-2 pb-sm-5 py-md-1 py-lg-1">
+        <div class="row py-3">
+          <div class="col-sm-6 col-md-3 text-center mb-md-0 mb-4 pb-md-0 pb-3">
+            <img class="mb-4" src="../../assets/img/ecommerce/home/services/delivery.svg" width="48" alt="Worldwide Shipping">
+            <h5 class="h5 mb-2">Envio rapido a todo Huancayo</h5>
+            <p class="mb-0 text-muted"></p>
+          </div>
+          <span class="divider-vertical d-sm-block d-none"></span>
+          <div class="col-sm-6 col-md-3 text-center mb-md-0 mb-4 pb-md-0 pb-3">
+            <img class="mb-4" src="../../assets/img/ecommerce/home/services/support.svg" width="48" alt="Customer Support">
+            <h5 class="h5 mb-2">Atención al cliente 24/7 dias a la semana</h5>
+            <p class="mb-0 text-muted"></p>
+          </div>
+          <span class="divider-vertical d-sm-block d-none"></span>
+          <div class="col-sm-6 col-md-3 text-center mb-md-0 mb-4 pb-md-0 pb-3">
+            <img class="mb-4" src="../../assets/img/ecommerce/home/services/guarantee.svg" width="48" alt="Customer Support">
+            <h5 class="h5 mb-2">Garantía de devolución del dinero</h5>
+            <p class="mb-0 text-muted"></p>
+          </div>
+          <span class="divider-vertical d-sm-block d-none"></span>
+          <div class="col-sm-6 col-md-3 text-center mb-md-0 mb-4 pb-md-0 pb-3">
+            <img class="mb-4" src="../../assets/img/ecommerce/home/services/payment.svg" width="48" alt="Customer Support">
+            <h5 class="h5 mb-2">Pago seguro en linea</h5>
+            <p class="mb-0 text-muted"></p>
+          </div>
+        </div>
+    </section>
+
+
+    <!-- Insagram -->
+    <section class="pt-5 pb-4 pt-lg-6 pb-lg-5 border-top border-bottom">
+        <div class="container pt-md-4 pb-2 pt-lg-0 pb-lg-0">
+          <div class="row">
+            <div class="col-md-4 text-center text-md-left pb-2 pb-md-0 mb-4 mb-md-0">
+              <p class="text-dark text-uppercase mb-2">Siguenos en Instagram</p>
+              <h2 class="h1 pb-2 pb-md-3">@floreria_elys
+              </h2>
+              <a href="https://www.instagram.com/floreria_elys/" target="_blank" class="btn btn-outline-primary btn-lg" >
+                <i class="cxi-instagram font-size-lg mr-1"></i>
+                Siguenos en Instagram
+              </a>
+            </div>
+            <div class="col-md-8">
+              <div class="cs-carousel cs-nav-outside">
+                <div class="cs-carousel-inner cs-carousel-inner-six" data-carousel-options='{
+                  
+                }'>
+                  <!-- Image -->
+                  <div>
+                    <img src="../../assets/img/ecommerce/home/instagram/01.jpg" alt="Image">
+                  </div>
+                  <!-- Image -->
+                  <div>
+                    <img src="../../assets/img/ecommerce/home/instagram/02.jpg" alt="Image">
+                  </div>
+                  <!-- Image -->
+                  <div>
+                    <img src="../../assets/img/ecommerce/home/instagram/03.jpg" alt="Image">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</main>
+
+<app-footer></app-footer>
